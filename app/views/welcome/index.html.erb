@@ -1,0 +1,30 @@
+<h1 align="center">Movie Rental Page</h1>
+<table align="center" border = 1 width = "50%" height = "50%">
+<tr align="center"  height=60px>
+    <td>
+     <%= link_to "Movies", controller: "movies" %>
+</td>	
+<td>
+     <%= link_to 'New movie', new_movie_path %>
+</td>	
+
+</tr>
+<tr align="center"  height=60px">
+<td>
+     <%= link_to "Customers", controller: "customers" %>
+</td>
+<td>
+     <%= link_to 'New customer', new_customer_path %>
+</td>
+</tr>
+<tr align="center" ;  height=60px>
+    
+
+<td>
+     <%= link_to "Rentals", controller: "rentals" %>
+</td>
+<td>
+     <%= link_to 'New rental', new_rental_path %>
+</td>
+</tr>
+</table>

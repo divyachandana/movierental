@@ -1,0 +1,50 @@
+<html>
+	<body class="homepage">
+<%= yield %> 
+  <h1>New rental</h1>
+  <% if flash[:error] %>
+  <h3><%= flash[:error] %><h3>
+  <% end %>
+  <%= form_for :rental, url: rentals_path do |f| %>
+  <% if @rental.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@rental.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @rental.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+	
+<% end %>
+
+  
+ 
+  <p>
+    <%= f.label :mobileno %><br>
+    <%= f.text_field :mobileno %>
+  </p>
+  <p>
+    <%= f.label :moviename %><br>
+    <%= f.text_field :moviename %>
+  </p>
+ 
+  
+  
+  <p>
+    <%= f.submit %>
+  </p>
+  <%= link_to 'Back', rentals_path %>
+<% end %>
+<table align="right">
+	<tr><td><%= link_to "HOME" , '/welcome/index.html'%></td></tr>
+	<tr><td><%= link_to "Movies", controller: "movies" %></td></tr>
+	<tr><td><%= link_to 'New movie', new_movie_path %> </td></tr>
+	<tr><td><%= link_to "Rental", controller: "rentals" %></td></tr>
+	<tr><t><%= link_to "Customer", controller: "customers"%></td></tr>
+	<tr><td><%= link_to 'New customer', new_customer_path %></td><tr>
+
+</table>
+
+

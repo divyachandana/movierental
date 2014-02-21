@@ -1,0 +1,31 @@
+<table align="right">
+	<tr><td><%= link_to "HOME" , '/welcome/index.html'%></td></tr>
+	<tr><td><%= link_to "Movies", controller: "movies" %></td></tr>
+	<tr><td><%= link_to 'New movie', new_movie_path %> </td></tr>
+	<tr><td><%= link_to "Rental", controller: "rentals" %></td></tr>
+	<tr><t><%= link_to "Customer", controller: "customers"%></td></tr>
+	<tr><td><%= link_to 'New customer', new_customer_path %></td><tr>
+	<tr><td><%= link_to 'New rental', new_rental_path %></td></tr>
+
+</table>
+
+<%= form_for(@rental) do |f| %> 
+ <h1>edit movie</h1> 
+<p>
+    <%= f.label :mobileno %><br>
+    <%= f.text_field :mobileno%>
+  </p>
+	<p>
+    <%= f.label :moviename %><br>
+    <%= f.text_field :moviename%>
+  </p>
+ 
+  
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<%end%>
+<%= link_to 'Back', rentals_path %>
+

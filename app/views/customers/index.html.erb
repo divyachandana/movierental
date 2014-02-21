@@ -1,0 +1,35 @@
+
+<table align="left">
+  <tr>
+    <th>name</th>
+    <th>mobileno</th>
+    <th>email</th>
+    <th>address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.mobileno %></td>
+      <td><%= customer.email %></td>
+      <td><%= customer.address %></td>
+      <td><%= link_to 'Show', customer_path(customer) %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Delete', customer_path(customer),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<table align="right">
+	<tr><td><%= link_to "HOME" , '/welcome/index.html'%></td></tr>
+	<tr><td><%= link_to "Movies", controller: "movies" %></td></tr>
+	<tr><td><%= link_to 'New movie', new_movie_path %> </td></tr>
+	<tr><td><%= link_to "Rental", controller: "rentals" %></td></tr>
+	<tr><td><%= link_to 'New customer', new_customer_path %></td><tr>
+	<tr><td><%= link_to 'New rental', new_rental_path %></td></tr>
+
+</table>

@@ -1,0 +1,22 @@
+<h1>Hello World......!</h1>
+<table>
+  <tr>
+    <th>moviename</th>
+    <th>language</th>
+    <th>yearofrelease</th>
+    <th>typeofmovie</th>
+    <th>status</th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.moviename %></td>
+      <td><%= movie.language %></td>
+      <td><%= movie.yor %></td>
+      <td><%= movie.typeofmovie %></td>
+      <td><%= movie.status%></td>
+    </tr>
+  <% end %>
+</table>

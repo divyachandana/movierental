@@ -1,0 +1,14 @@
+
+<%= form_for :rent , url: rents_path do |r| %> 
+
+	<p>
+    <%= r.label :mobileno%><br>
+    <%= r.text_field :mobileno%>
+ 	 </p>
+ 
+	
+<p>
+    <%= r.submit 'rent'%>
+  </p>
+
+<%end%>

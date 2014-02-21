@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mobileno: 1
+  moviename: MyString
+  customer_id: 
+  movie_id: 
+
+two:
+  mobileno: 1
+  moviename: MyString
+  customer_id: 
+  movie_id: 

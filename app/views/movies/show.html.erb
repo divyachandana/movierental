@@ -1,0 +1,31 @@
+<table align="right">
+	<tr><td><%= link_to "HOME" , '/welcome/index.html'%></td></tr>
+	<tr><td><%= link_to "Movies", controller: "movies" %></td></tr>
+	<tr><td><%= link_to 'New movie', new_movie_path %> </td></tr>
+	<tr><td><%= link_to "Rental", controller: "rentals" %></td></tr>
+	<tr><t><%= link_to "Customer", controller: "customers"%></td></tr>
+	<tr><td><%= link_to 'New customer', new_customer_path %></td><tr>
+	<tr><td><%= link_to 'New rental', new_rental_path %></td></tr>
+
+</table>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @movie.moviename %>
+</p>
+ 
+<p>
+  <strong>Language:</strong>
+  <%= @movie.language %>
+</p>
+<p>
+  <strong>YOR:</strong>
+  <%= @movie.yor %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @movie.typeofmovie %>
+</p>
+
+<%= link_to 'Back', movies_path %>
+| <%= link_to 'Edit', edit_movie_path(@movie) %>

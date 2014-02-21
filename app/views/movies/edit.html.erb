@@ -1,0 +1,41 @@
+<table align="right">
+	<tr><td><%= link_to "HOME" , '/welcome/index.html'%></td></tr>
+	<tr><td><%= link_to "Movies", controller: "movies" %></td></tr>
+	<tr><td><%= link_to 'New movie', new_movie_path %> </td></tr>
+	<tr><td><%= link_to "Rental", controller: "rentals" %></td></tr>
+	<tr><t><%= link_to "Customer", controller: "customers"%></td></tr>
+	<tr><td><%= link_to 'New customer', new_customer_path %></td><tr>
+	<tr><td><%= link_to 'New rental', new_rental_path %></td></tr>
+
+</table>
+
+<%= form_for(@movie) do |f| %> 
+ <h1>edit movie</h1> 
+
+<p>
+    <%= f.label :moviename %><br>
+    <%= f.text_field :moviename%>
+  </p>
+ 
+  <p>
+    <%= f.label :language %><br>
+    <%= f.text_field :language%>
+  </p>
+  <p>
+    <%= f.label :yor%><br>
+    <%= f.select :yor, (1940)..(Time.zone.now.year)%>
+    
+  </p>
+  <p>
+    <%= f.label :typeofmovie %><br>
+    <%= f.select :typeofmovie ,"<option>Comedy</option><option>Action</option><option>Family</option><option>Children</option>".html_safe%>
+    
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+
+<%end%>
+<%= link_to 'Back', movies_path %>
+

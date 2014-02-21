@@ -1,0 +1,43 @@
+<html>
+	<body class="homepage">
+<table align="right">
+	<tr><td><%= link_to "HOME" , '/welcome/index.html'%></td></tr>
+	<tr><td><%= link_to "Movies", controller: "movies" %></td></tr>
+	<tr><td><%= link_to 'New movie', new_movie_path %> </td></tr>
+	<tr><td><%= link_to "Rental", controller: "rentals" %></td></tr>
+	<tr><td><%= link_to 'New rental', new_rental_path %></td></tr>
+
+</table>
+
+<%= form_for :customer , url: customers_path do |t| %> 
+
+ <h1>new customer</h1> 
+
+<p>
+    <%= t.label :name %><br>
+    <%= t.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= t.label :mobileno %><br>
+    <%= t.text_field :mobileno %>
+  </p>
+  <p>
+    <%= t.label :email %><br>
+    <%= t.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= t.label :address %><br>
+    <%= t.text_field :address %>
+  </p>
+  
+  <p>
+    <%= t.submit %>
+  </p>
+
+
+<%end%>
+<%= link_to 'Back', customers_path %>
+</body>
+</html>
